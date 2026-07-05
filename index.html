@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fred's Painting Contractors | Schererville, IN Painting Company</title>
+<meta name="description" content="Fred's Painting Contractors provides quality interior, exterior, residential, and commercial painting in Schererville, Dyer, Highland, Griffith & Merrillville, IN. 5-star rated. Free estimates.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #1c2b3a;
+    --navy-deep: #121e29;
+    --brick: #c1502e;
+    --brick-dark: #a63f21;
+    --cream: #faf6ef;
+    --cream-dim: #f0ead9;
+    --ink: #24303b;
+    --muted: #5c6a76;
+    --line: #e2dccb;
+    --radius: 14px;
+    --shadow: 0 12px 30px -12px rgba(18,30,41,0.25);
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter', system-ui, sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    line-height:1.15;
+    margin:0 0 .5em;
+    color:var(--navy-deep);
+  }
+  p{margin:0 0 1em;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .container{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 1.25rem;
+  }
+  .visually-hidden{
+    position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+    overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
+  }
+  a.skip-link{
+    position:absolute;left:1rem;top:-100px;background:var(--brick);color:#fff;
+    padding:.6rem 1rem;border-radius:8px;z-index:200;transition:top .2s;
+  }
+  a.skip-link:focus{top:1rem;}
+
+  /* Header */
+  header.site-header{
+    position:sticky;top:0;z-index:100;
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0.9rem 1.25rem;
+    max-width:1120px;margin:0 auto;
+    gap:1rem;
+  }
+  .brand{
+    display:flex;align-items:center;gap:.6rem;
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.15rem;
+    color:var(--navy-deep);
+    text-decoration:none;
+  }
+  .brand svg{flex-shrink:0;}
+  nav.primary-nav{display:none;}
+  nav.primary-nav ul{
+    list-style:none;display:flex;gap:1.75rem;margin:0;padding:0;
+  }
+  nav.primary-nav a{
+    text-decoration:none;font-weight:600;color:var(--navy);
+    font-size:.95rem;
+    position:relative;
+    padding:.25rem 0;
+  }
+  nav.primary-nav a:hover{color:var(--brick);}
+  .call-btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--brick);color:#fff;
+    padding:.65rem 1.1rem;
+    border-radius:999px;
+    font-weight:700;font-size:.9rem;
+    text-decoration:none;
+    white-space:nowrap;
+    box-shadow:var(--shadow);
+    transition:background .15s, transform .15s;
+  }
+  .call-btn:hover{background:var(--brick-dark);transform:translateY(-1px);}
+  .call-btn svg{width:16px;height:16px;}
+
+  @media (min-width:840px){
+    nav.primary-nav{display:block;}
+  }
+
+  /* Hero */
+  .hero{
+    position:relative;
+    background:
+      linear-gradient(120deg, rgba(18,30,41,0.86), rgba(28,43,58,0.75)),
+      repeating-linear-gradient(135deg, #223244 0 40px, #1c2b3a 40px 80px);
+    color:#fff;
+    padding:4.5rem 0 4rem;
+    overflow:hidden;
+  }
+  .hero .container{
+    display:grid;
+    gap:2.5rem;
+    position:relative;
+    z-index:2;
+  }
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:.4rem;
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.25);
+    padding:.4rem .85rem;
+    border-radius:999px;
+    font-size:.82rem;
+    font-weight:600;
+    margin-bottom:1.25rem;
+    letter-spacing:.02em;
+  }
+  .hero-badge svg{width:14px;height:14px;fill:#ffcf6b;}
+  .hero h1{
+    color:#fff;
+    font-size:clamp(2.1rem, 5.5vw, 3.4rem);
+    max-width:16ch;
+    margin-bottom:.6rem;
+  }
+  .hero .tagline{
+    font-size:1.15rem;
+    color:#e7e2d4;
+    max-width:48ch;
+    margin-bottom:1.75rem;
+  }
+  .hero-ctas{
+    display:flex;flex-wrap:wrap;gap:.85rem;
+  }
+  .btn-outline-light{
+    display:inline-flex;align-items:center;gap:.5rem;
+    border:1.5px solid rgba(255,255,255,0.55);
+    color:#fff;
+    padding:.65rem 1.2rem;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:600;
+    transition:background .15s, border-color .15s;
+  }
+  .btn-outline-light:hover{background:rgba(255,255,255,0.12);border-color:#fff;}
+  .hero-primary{
+    display:inline-flex;align-items:center;gap:.6rem;
+    background:var(--brick);
+    color:#fff;
+    padding:.85rem 1.6rem;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:1.02rem;
+    box-shadow:0 14px 28px -10px rgba(193,80,46,0.6);
+    transition:background .15s, transform .15s;
+  }
+  .hero-primary:hover{background:var(--brick-dark);transform:translateY(-2px);}
+  .hero-primary svg{width:18px;height:18px;}
+
+  .hero-facts{
+    display:flex;flex-wrap:wrap;
+    gap:1.5rem 2.25rem;
+    margin-top:2.25rem;
+    padding-top:1.75rem;
+    border-top:1px solid rgba(255,255,255,0.18);
+  }
+  .hero-fact{
+    display:flex;align-items:flex-start;gap:.6rem;
+    min-width:140px;
+  }
+  .hero-fact svg{width:22px;height:22px;flex-shrink:0;fill:#ffcf6b;margin-top:2px;}
+  .hero-fact strong{display:block;font-size:1.05rem;color:#fff;}
+  .hero-fact span{font-size:.85rem;color:#cdd6dd;}
+
+  /* Section basics */
+  section{padding:4.5rem 0;}
+  .section-head{
+    max-width:640px;
+    margin:0 auto 2.75rem;
+    text-align:center;
+  }
+  .eyebrow{
+    display:inline-block;
+    color:var(--brick);
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    font-size:.78rem;
+    margin-bottom:.6rem;
+  }
+  .section-head h2{font-size:clamp(1.7rem,3.5vw,2.3rem);}
+  .section-head p{color:var(--muted);font-size:1.03rem;}
+
+  /* Services */
+  .services{background:#fff;}
+  .service-grid{
+    display:grid;
+    gap:1.5rem;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:640px){
+    .service-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media(min-width:980px){
+    .service-grid{grid-template-columns:repeat(4,1fr);}
+  }
+  .service-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:1.9rem 1.6rem;
+    transition:transform .18s, box-shadow .18s;
+  }
+  .service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+  .service-icon{
+    width:52px;height:52px;
+    background:var(--navy);
+    border-radius:12px;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:1.1rem;
+  }
+  .service-icon svg{width:26px;height:26px;fill:#fff;}
+  .service-card h3{font-size:1.15rem;margin-bottom:.4rem;}
+  .service-card p{color:var(--muted);font-size:.94rem;margin-bottom:0;}
+
+  /* Specialties strip */
+  .specialties{
+    background:var(--navy);
+    color:#fff;
+  }
+  .specialties .container{
+    display:grid;
+    gap:2rem;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:800px){
+    .specialties .container{grid-template-columns:1fr 1fr;align-items:center;}
+  }
+  .specialties h2{color:#fff;}
+  .specialties p{color:#c8d1d9;}
+  .specialty-list{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;gap:1rem;}
+  .specialty-list li{
+    display:flex;gap:.75rem;align-items:flex-start;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    padding:1rem 1.1rem;
+    border-radius:12px;
+  }
+  .specialty-list svg{width:22px;height:22px;fill:#ffcf6b;flex-shrink:0;margin-top:2px;}
+  .specialty-list strong{display:block;color:#fff;margin-bottom:.15rem;}
+  .specialty-list span{color:#c8d1d9;font-size:.92rem;}
+
+  /* About */
+  .about{background:#fff;}
+  .about .container{
+    display:grid;gap:2.5rem;
+    grid-template-columns:1fr;
+    align-items:center;
+  }
+  @media(min-width:900px){
+    .about .container{grid-template-columns:1fr 1fr;}
+  }
+  .about-visual{
+    background:linear-gradient(160deg, var(--brick) 0%, var(--brick-dark) 100%);
+    border-radius:var(--radius);
+    min-height:280px;
+    display:flex;align-items:center;justify-content:center;
+    padding:2rem;
+    position:relative;
+    overflow:hidden;
+  }
+  .about-visual::before{
+    content:"";
+    position:absolute;inset:0;
+    background:repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0 12px, transparent 12px 24px);
+  }
+  .about-visual .badge-circle{
+    position:relative;z-index:1;
+    background:#fff;
+    color:var(--navy-deep);
+    width:170px;height:170px;
+    border-radius:50%;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    text-align:center;
+    box-shadow:var(--shadow);
+  }
+  .badge-circle strong{font-family:'Fraunces',serif;font-size:1.9rem;line-height:1;}
+  .badge-circle span{font-size:.78rem;font-weight:600;color:var(--muted);margin-top:.35rem;letter-spacing:.03em;}
+  .badge-circle .stars{color:#f0a500;font-size:1rem;margin-top:.3rem;}
+
+  .about-copy h2{margin-bottom:.75rem;}
+  .about-copy p{color:var(--muted);}
+  .about-points{
+    list-style:none;padding:0;margin:1.5rem 0 0;
+    display:grid;gap:.85rem;
+  }
+  .about-points li{
+    display:flex;gap:.65rem;align-items:flex-start;
+    font-weight:600;color:var(--ink);font-size:.97rem;
+  }
+  .about-points svg{width:20px;height:20px;fill:var(--brick);flex-shrink:0;margin-top:2px;}
+
+  /* Reviews */
+  .reviews{background:var(--cream-dim);}
+  .review-grid{
+    display:grid;gap:1.5rem;
+    grid-template-columns:1fr;
+    max-width:760px;margin:0 auto;
+  }
+  @media(min-width:700px){
+    .review-grid{grid-template-columns:1fr 1fr;}
+  }
+  .review-card{
+    background:#fff;
+    border-radius:var(--radius);
+    padding:1.75rem;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+  }
+  .review-stars{color:#f0a500;font-size:1.1rem;margin-bottom:.6rem;letter-spacing:.1em;}
+  .review-card p.quote{font-style:italic;color:var(--ink);margin-bottom:1rem;}
+  .review-name{font-weight:700;font-size:.9rem;color:var(--navy-deep);}
+  .rating-summary{
+    text-align:center;margin-bottom:2.5rem;
+  }
+  .rating-summary .stars-big{color:#f0a500;font-size:1.6rem;letter-spacing:.15em;}
+  .rating-summary p{color:var(--muted);margin-top:.4rem;}
+
+  /* Contact */
+  .contact{background:var(--navy-deep);color:#fff;}
+  .contact .section-head h2{color:#fff;}
+  .contact .section-head p{color:#c8d1d9;}
+  .contact-grid{
+    display:grid;gap:2rem;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:860px){
+    .contact-grid{grid-template-columns:1.1fr 0.9fr;}
+  }
+  .contact-card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:var(--radius);
+    padding:2.25rem;
+  }
+  .contact-card h3{color:#fff;font-size:1.3rem;}
+  .contact-list{list-style:none;padding:0;margin:1.25rem 0 1.75rem;display:grid;gap:1.1rem;}
+  .contact-list li{display:flex;gap:.85rem;align-items:flex-start;}
+  .contact-list svg{width:22px;height:22px;fill:#ffcf6b;flex-shrink:0;margin-top:2px;}
+  .contact-list a{color:#fff;text-decoration:none;font-weight:600;}
+  .contact-list a:hover{color:#ffcf6b;}
+  .contact-list span.label{display:block;font-size:.78rem;color:#a9b6c0;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.15rem;}
+  .contact-cta-block{
+    display:flex;flex-direction:column;gap:1rem;
+    justify-content:center;
+    background:linear-gradient(160deg, var(--brick), var(--brick-dark));
+    border-radius:var(--radius);
+    padding:2.25rem;
+    text-align:center;
+  }
+  .contact-cta-block h3{color:#fff;font-size:1.4rem;}
+  .contact-cta-block p{color:#ffe6d8;}
+  .contact-cta-block .call-btn{
+    background:#fff;color:var(--brick-dark);
+    justify-content:center;
+    font-size:1.05rem;padding:.9rem 1.4rem;
+  }
+  .contact-cta-block .call-btn:hover{background:#ffe6d8;}
+  .service-area{
+    margin-top:1.5rem;
+    font-size:.9rem;
+    color:#a9b6c0;
+  }
+  .service-area strong{color:#fff;}
+
+  /* Footer */
+  footer.site-footer{
+    background:var(--navy-deep);
+    color:#8fa0ac;
+    padding:2rem 0;
+    border-top:1px solid rgba(255,255,255,0.08);
+    font-size:.86rem;
+  }
+  footer.site-footer .container{
+    display:flex;flex-wrap:wrap;
+    justify-content:space-between;
+    gap:1rem;
+    align-items:center;
+  }
+  footer.site-footer a{color:#c8d1d9;text-decoration:none;}
+  footer.site-footer a:hover{color:#fff;}
+  .footer-credit{
+    width:100%;
+    text-align:center;
+    margin-top:1.25rem;
+    padding-top:1.25rem;
+    border-top:1px solid rgba(255,255,255,0.08);
+    font-size:.8rem;
+    color:#6b7d89;
+  }
+  .footer-credit a{color:#93a4b0;}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="#main" class="brand" aria-label="Fred's Painting Contractors home">
+      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#c1502e"/>
+        <path d="M9 21V11h4.5a3.5 3.5 0 0 1 0 7H12v3H9zm3-5h1.4a1.5 1.5 0 0 0 0-3H12v3z" fill="#fff"/>
+        <path d="M18 21V11h3v10h-3z" fill="#fff"/>
+      </svg>
+      Fred's Painting Contractors
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="call-btn" href="tel:+12198652056">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.7 5.1 6.5 6.5l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Call Now
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <div>
+        <span class="hero-badge">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.4 6.1L10 14.8 4.4 17.5l1.4-6.1L1.2 7.2l6.2-.6L10 1z"/></svg>
+          5.0 Rated Local Painting Contractor
+        </span>
+        <h1>Schererville's Trusted Painting Contractor for Homes &amp; Businesses</h1>
+        <p class="tagline">Fred's Painting Contractors delivers detail-oriented interior and exterior painting for homeowners and small businesses across Northwest Indiana — backed by a perfect customer rating and a family-run commitment to doing the job right.</p>
+        <div class="hero-ctas">
+          <a class="hero-primary" href="tel:+12198652056">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.7 5.1 6.5 6.5l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            Call for a Free Estimate
+          </a>
+          <a class="btn-outline-light" href="#services">View Our Services</a>
+        </div>
+
+        <div class="hero-facts">
+          <div class="hero-fact">
+            <svg viewBox="0 0 24 24"><path d="M10 1l2.6 5.6 6.2.6-4.6 4.2 1.4 6.1L10 14.8 4.4 17.5l1.4-6.1L1.2 7.2l6.2-.6L10 1z"/></svg>
+            <div><strong>5-Star Rating</strong><span>Backed by satisfied local clients</span></div>
+          </div>
+          <div class="hero-fact">
+            <svg viewBox="0 0 24 24"><path d="M12 2 2 7v6c0 5.1 3.4 9.4 10 11 6.6-1.6 10-5.9 10-11V7l-10-5z"/></svg>
+            <div><strong>Family-Run</strong><span>Local Schererville contractor</span></div>
+          </div>
+          <div class="hero-fact">
+            <svg viewBox="0 0 24 24"><path d="M12 2 2 21h20L12 2zm0 4.7L18.3 19H5.7L12 6.7z"/></svg>
+            <div><strong>Free Estimates</strong><span>No obligation quotes</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What We Do</span>
+        <h2>Painting Services Built on Detail &amp; Craftsmanship</h2>
+        <p>From single rooms to full commercial repaints, Fred's Painting Contractors brings the same careful, detail-oriented approach to every project.</p>
+      </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2 2 7v6c0 5.1 3.4 9.4 10 11 6.6-1.6 10-5.9 10-11V7l-10-5zM8 12l3 3 6-6-1.4-1.4L11 12.2l-1.6-1.6L8 12z" fill="none"/><path d="M4 4h16v3H4z"/><path d="M6 9h12v11H6z"/></svg>
+          </div>
+          <h3>Interior Painting</h3>
+          <p>Clean lines, smooth finishes, and careful prep work for living rooms, kitchens, bedrooms, and every space in between.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 21l1.5-4.5L15 6l3 3-10.5 10.5L3 21zM17 4l3 3 2-2-3-3-2 2z"/></svg>
+          </div>
+          <h3>Exterior Painting</h3>
+          <p>Weather-ready coatings and thorough surface prep that protect your property and boost curb appeal through every Indiana season.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10z"/></svg>
+          </div>
+          <h3>Residential Painting</h3>
+          <p>Full-home color transformations and single-room refreshes, completed with respect for your home, schedule, and budget.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 21V7l6-3v4l6-3v4l6-3v14H3zm4-2h2v-4H7v4zm4 0h2v-6h-2v6zm4 0h2v-3h-2v3z"/></svg>
+          </div>
+          <h3>Commercial Painting</h3>
+          <p>Minimal-disruption painting for offices, storefronts, and small businesses across Schererville and surrounding communities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="specialties">
+    <div class="container">
+      <div>
+        <span class="eyebrow" style="color:#ffcf6b;">Why Choose Fred's</span>
+        <h2>Personalized Service From a Small, Local Painting Company</h2>
+        <p>As a family-run contractor, Fred's Painting Contractors treats every job — big or small — with the attention to detail that big painting companies often skip.</p>
+      </div>
+      <ul class="specialty-list">
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>
+          <div><strong>Detail-Oriented Craftsmanship</strong><span>Careful prep, clean edges, and finishes that last.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>
+          <div><strong>Local, Established Contractor</strong><span>Rooted in Schererville, serving Northwest Indiana.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>
+          <div><strong>5-Star Customer Rating</strong><span>Consistent quality that keeps clients happy.</span></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-visual">
+        <div class="badge-circle">
+          <strong>5.0</strong>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <span>CUSTOMER RATING</span>
+        </div>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">About Us</span>
+        <h2>A Family-Run Painting Contractor Serving Northwest Indiana</h2>
+        <p>Fred's Painting Contractors is a Schererville, Indiana-based residential and commercial painting company built on quality workmanship and honest service. As a small, family-run operation, we give every project — from a single accent wall to a full commercial repaint — the personal attention and detail-oriented care that larger companies often can't match.</p>
+        <p>We proudly serve homeowners and small business owners throughout Schererville, Dyer, Highland, Griffith, Merrillville, and the surrounding Northwest Indiana area.</p>
+        <ul class="about-points">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>
+            Locally owned and operated in Schererville, IN
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>
+            Interior, exterior, residential & commercial expertise
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z"/></svg>
+            Free, no-obligation estimates
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Social Proof</span>
+        <h2>What Our Customers Say</h2>
+      </div>
+      <div class="rating-summary">
+        <div class="stars-big" aria-hidden="true">★★★★★</div>
+        <p>5.0 out of 5 — based on customer reviews</p>
+      </div>
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <p class="quote">"Fred's Painting Contractors did excellent work — professional, detail-oriented, and easy to work with from start to finish."</p>
+          <p class="review-name">Verified Customer</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars" aria-hidden="true">★★★★★</div>
+          <p class="quote">"Great communication and a beautiful finished result. It's clear this is a team that takes pride in their craft."</p>
+          <p class="review-name">Verified Customer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" style="color:#ffcf6b;">Get In Touch</span>
+        <h2>Ready to Refresh Your Space?</h2>
+        <p>Call now for a free painting estimate — serving Schererville, Dyer, Highland, Griffith, Merrillville, and nearby Northwest Indiana communities.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Contact Information</h3>
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.7 5.1 6.5 6.5l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              <div>
+                <span class="label">Phone</span>
+                <a href="tel:+12198652056">(219) 865-2056</a>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+              <div>
+                <span class="label">Address</span>
+                <a href="https://maps.google.com/?q=92+W+Lincoln+Dr,+Schererville,+IN+46375" target="_blank" rel="noopener">92 W Lincoln Dr, Schererville, IN 46375</a>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 2 2 7v6c0 5.1 3.4 9.4 10 11 6.6-1.6 10-5.9 10-11V7l-10-5z"/></svg>
+              <div>
+                <span class="label">Service Area</span>
+                <span>Schererville, Dyer, Highland, Griffith, Merrillville & NW Indiana</span>
+              </div>
+            </li>
+          </ul>
+          <p class="service-area"><strong>Rated 5.0 stars</strong> by local customers — call today to get your free estimate scheduled.</p>
+        </div>
+        <div class="contact-cta-block">
+          <h3>Free Estimates — No Obligation</h3>
+          <p>Speak directly with Fred's Painting Contractors and get a clear, honest quote for your project.</p>
+          <a class="call-btn" href="tel:+12198652056">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.7 5.1 6.5 6.5l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            (219) 865-2056
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <strong style="color:#fff;">Fred's Painting Contractors</strong> · Schererville, IN
+    </div>
+    <div>
+      <a href="tel:+12198652056">(219) 865-2056</a> &nbsp;|&nbsp;
+      <a href="http://fcipaints.com" target="_blank" rel="noopener">fcipaints.com</a>
+    </div>
+    <div class="footer-credit">
+      &copy; 2026 Fred's Painting Contractors. All rights reserved. · Website sample by <a href="#" rel="noopener">Wild Card Creative Co</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
